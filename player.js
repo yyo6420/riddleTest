@@ -1,0 +1,5 @@
+const plaryer = {
+  name: "",
+  times: []
+};
+

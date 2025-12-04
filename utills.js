@@ -1,4 +1,3 @@
-import { riddles } from "./allRilddles.js";
 import input from "analiza-sync";
 
 const gameStatistics = {
@@ -7,7 +6,7 @@ const gameStatistics = {
   timer: 0,
 };
 
-function getRidlle(ridlle) {
+function askRidlle(ridlle) {
   const statTimer = Date.now();
   const answer = input(
     `${ridlle["taskDescription"]} \n${ridlle["choices"]} \n`
