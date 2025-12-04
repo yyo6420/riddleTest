@@ -1,5 +1,5 @@
-export const player = {
-  name: "",
+export const playerdetails = {
+  playername: "",
   times: []
 };
 

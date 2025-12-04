@@ -1,24 +1,22 @@
-import { player } from "./player.js";
-import { riddles } from "./allRilddles.js";
+import { playerdetails } from "./player.js";
 import input from "analiza-sync";
 
-function createPlayer() {
-  const playerName = input(
-    "Hello and welcome to our Trivia Riddles Game\nlet's get started\nwhat is your mane? "
-  );
-  player["name"] = playerName;
-}
-
-const gameStatistics = {
+export const gameStatistics = {
   correctAnswers: 0,
   wrongAnswers: 0,
   timer: 0,
   timeAverage: 0,
 };
 
+export function createPlayer(name) {
+  playerdetails["playername"] = name;
+}
 
+export function addSloveTime(player, seconds) {
+  player["times"].push(seconds);
+}
 
-function askRidlle(ridlle) {
+export function askRidlle(ridlle) {
   const statTimer = Date.now();
   const answer = input(
     `${ridlle["taskDescription"]} \n${ridlle["choices"]} \n`
@@ -34,9 +32,10 @@ function askRidlle(ridlle) {
     const stopTimer = Math.floor((Date.now() - statTimer) / 1000);
     gameStatistics["timer"] += stopTimer;
   }
+  return statTimer;
 }
 
-function showStatus() {
+export function showStatus() {
   const average =
     gameStatistics["timer"] /
     (gameStatistics["correctAnswers"] + gameStatistics["wrongAnswers"]);
