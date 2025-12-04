@@ -1,4 +1,4 @@
-const plaryer = {
+export const player = {
   name: "",
   times: []
 };
