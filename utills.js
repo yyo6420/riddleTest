@@ -24,3 +24,7 @@ function getRidlle(ridlle) {
     gameStatistics["timer"] += stopTimer;
   }
 }
+
+function showStatus(){
+    console.log(gameStatistics);
+}
