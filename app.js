@@ -1,11 +1,10 @@
 import input from "analiza-sync";
 import { riddles } from "./allRilddles.js";
 import { gameStatistics } from "./utills.js";
-import { createPlayer } from "./utills.js";
 import { addSloveTime } from "./utills.js";
 import { askRidlle } from "./utills.js";
 import { showStatus } from "./utills.js";
-import { playerdetails } from "./player.js";
+import { createPlayer } from "./player.js";
 
 function gameFlow() {
   const askForName = input(

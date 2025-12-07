@@ -1,4 +1,3 @@
-import { playerdetails } from "./player.js";
 import input from "analiza-sync";
 
 export const gameStatistics = {
@@ -7,10 +6,6 @@ export const gameStatistics = {
   timer: 0,
   timeAverage: 0,
 };
-
-export function createPlayer(name) {
-  playerdetails["playername"] = name;
-}
 
 export function addSloveTime(player, seconds) {
   player["times"].push(seconds);
@@ -42,4 +37,3 @@ export function showStatus() {
   gameStatistics["timeAverage"] += average;
   console.log(gameStatistics);
 }
-
