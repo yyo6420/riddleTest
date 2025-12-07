@@ -1,6 +1,5 @@
 import input from "analiza-sync";
 import { riddles } from "./allRilddles.js";
-import { gameStatistics } from "./utills.js";
 import { addSloveTime } from "./utills.js";
 import { askRidlle } from "./utills.js";
 import { showStatus } from "./utills.js";
